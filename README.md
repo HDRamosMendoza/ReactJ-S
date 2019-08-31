@@ -25,7 +25,8 @@ Por ejemplo:
 
 > Crear proyecto en React JS.
     create-react-app reactpixabay
-     Dentro del proyecto "reactpíxabay" en consola digitamos npm start
+    npx create-react-app myFirstApp
+    Dentro del proyecto "reactpíxabay" en consola digitamos npm start
 
 > Estilos de apoyo https://bootswatch.com/4/superhero/bootstrap.min.css
 
@@ -34,5 +35,13 @@ Por ejemplo:
 > Componente.
     Te permite tener un codigo mas ordenado.
     Te permite reutilizar codigo.
+
+> Nos proporcionar vista declarativas. Lo que estamos viendo en codigo lo estaremos viendo en la pantalla.
+
+> Virtual DOM. Nos permite pintar en pantalla o nos permite volver a pintar en pantalla.
+
+> Componentes. Reutilzación.
+
+> Server side rendering.
 
 
