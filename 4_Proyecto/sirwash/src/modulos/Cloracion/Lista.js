@@ -29,6 +29,9 @@ import Select from '@mui/material/Select';
 import Filtro from '../../Componente/Filtro';
 import TableGrid from './TableGrid';
 
+import Typography from '@mui/material/Typography';
+import Breadcrumbs from '@mui/material/Breadcrumbs';
+import Link from '@mui/material/Link';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -38,6 +41,12 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
   color: theme.palette.text.secondary,
 }));
+
+function handleClick(event) {
+  event.preventDefault();
+  console.info('You clicked a breadcrumb.');
+}
+
 
 function Lista() {
 
@@ -53,9 +62,43 @@ function Lista() {
     setValue(newValue); 
   };
 
+  function handleClick(event) {
+    event.preventDefault();
+    console.info('You clicked a breadcrumb.');
+  }
+
+  /*
+    <Breadcrumbs aria-label="breadcrumb" sx={{marginLeft:1}}>
+      <Link underline="hover" color="inherit" href="/">
+        Lista de Encuestas
+      </Link>
+      <Link
+        underline="hover"
+        color="inherit"
+        href="/material-ui/getting-started/installation/"
+      >
+        Core
+      </Link>
+      <Typography color="text.primary">Medición de Cloro Residual</Typography>
+    </Breadcrumbs>
+  */
+
   return (
     <div>
-      
+      <Box xs={{ flexGrow: 1 }}>
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <Item>
+              <Breadcrumbs aria-label="breadcrumb" sx={{marginLeft:1}}>
+                <Link underline="hover" color="inherit" href="/material-ui/getting-started/installation/">
+                  Lista de Encuestas
+                </Link>
+                <Typography color="text.primary">Cloración</Typography>
+              </Breadcrumbs>
+            </Item>
+          </Grid>
+        </Grid>
+      </Box>
       <Box xs={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
