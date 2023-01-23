@@ -5,7 +5,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import AddIcon from '@mui/icons-material/Add';
 import AutorenewIcon from '@mui/icons-material/Autorenew';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
-import Paper from '@mui/material/Paper';
+
 import Grid from '@mui/material/Grid';
 
 function Acciones() {

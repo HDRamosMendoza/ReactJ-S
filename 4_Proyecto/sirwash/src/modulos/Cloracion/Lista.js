@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid';
 import Navegacion from '../../Componente/Navegacion';
 import Filtro from '../../Componente/Filtro';
 import Acciones from '../../Componente/Acciones';
-import TableGrid from './TableGrid';
+import TableGrid from '../../Componente/TableGrid';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
