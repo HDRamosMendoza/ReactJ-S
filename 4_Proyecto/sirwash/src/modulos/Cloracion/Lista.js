@@ -1,9 +1,18 @@
 import * as React from 'react';
 import dayjs from 'dayjs';
+import Stack from '@mui/material/Stack';
+import TextField from '@mui/material/TextField';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
+
 import Button from '@mui/material/Button';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import AddIcon from '@mui/icons-material/Add';
 import AutorenewIcon from '@mui/icons-material/Autorenew';
+import SearchIcon from '@mui/icons-material/Search';
+import DeleteIcon from '@mui/icons-material/Delete';
+import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 
 
 
@@ -19,8 +28,8 @@ import Select from '@mui/material/Select';
 
 import Filtro from '../../Componente/Filtro';
 import TableGrid from './TableGrid';
-import TextField from '@mui/material/TextField';
-import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
+
+
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -32,7 +41,8 @@ const Item = styled(Paper)(({ theme }) => ({
 
 function Lista() {
 
-  const [value, setValue] = React.useState(dayjs('2014-08-18T21:11:54'));
+  const [value, setValue] = React.useState('');
+  /*const [value, setValue] = React.useState(dayjs('2014-08-18T21:11:54'));*/
   const [age, setAge] = React.useState('');
 
   const handleChange = (event) => {
@@ -45,7 +55,6 @@ function Lista() {
 
   return (
     <div>
-
       
       <Box xs={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
@@ -60,8 +69,29 @@ function Lista() {
                 xs={1} >
                 <Grid item xs={6} display="flex" justifyContent="flex-start">
 
-           
+                  <LocalizationProvider dateAdapter={AdapterDayjs} >
+                    <Stack spacing={2}>
+                      <MobileDatePicker   
+                        label="Fecha de Inicio"
+                        inputFormat="DD/MM/YYYY"
+                        value={value} 
+                        onChange={handleChange} 
+                        renderInput={(params) => <TextField {...params} size="small" sx={{marginRight:1}}/>}
+                      />
+                    </Stack>
+                  </LocalizationProvider>
 
+                  <LocalizationProvider dateAdapter={AdapterDayjs} sx={{marginLeft:2}}>
+                    <Stack spacing={2}>
+                      <MobileDatePicker   
+                        label="Fecha de Fin"
+                        inputFormat="DD/MM/YYYY"
+                        value={value} 
+                        onChange={handleChange} 
+                        renderInput={(params) => <TextField {...params} size="small" sx={{marginRight:1}}/>}
+                      />
+                    </Stack>
+                  </LocalizationProvider>
 
                   <Box sx={{ minWidth: 200, marginLeft:1}}>
                     <FormControl fullWidth>
@@ -77,12 +107,12 @@ function Lista() {
                   
                 </Grid>
                 <Grid item xs={6} display="flex" justifyContent="flex-end">
-                  <Button variant="contained" size="small" color="primary" xs={{marginLeft:1}}>
-                    <AddIcon/>
+                  <Button variant="contained" size="small" color="primary" sx={{marginLeft:1}}>
+                    <SearchIcon sx={{fontSize:18,marginRight:1}}/>
                     Buscar
                   </Button>
-                  <Button variant="outlined" size="small" color="inherit" xs={{marginLeft:1}}>
-                    <AutorenewIcon/>
+                  <Button variant="outlined" size="small" color="inherit" sx={{marginLeft:1}}>
+                    <DeleteIcon sx={{fontSize:18,marginRight:1}}/>
                     Limpiar
                   </Button>
                 </Grid>
@@ -109,15 +139,18 @@ function Lista() {
           Volver
         </Button>
         <Grid item xs={12} display="flex" justifyContent="flex-end">
-          <Button variant="contained" size="small" color="primary" style={{marginLeft:'5px'}}>
-            <AddIcon/>
-            Nuevo Registro
-          </Button>
-          <Button variant="outlined" size="small" color="inherit" style={{marginLeft:'5px'}}>
-            <AutorenewIcon/>
+          <Button variant="outlined" size="small" color="inherit" sx={{marginLeft:'5px'}}>
+            <AutorenewIcon sx={{fontSize:18,marginRight:1}}/>
             Actualizar
           </Button>
-          <Button variant="outlined" size="small" color="success" style={{marginLeft:'5px'}}>
+
+          <Button variant="contained" size="small" color="primary" sx={{marginLeft:'5px'}}>
+            <AddIcon sx={{fontSize:18,marginRight:1}}/>
+            Nuevo Registro
+          </Button>
+          
+          <Button variant="contained" size="small" color="success" sx={{marginLeft:'5px'}}>
+            <CloudDownloadIcon sx={{fontSize:18,marginRight:1}}/>
             Exportar XLS
           </Button>
         </Grid>
