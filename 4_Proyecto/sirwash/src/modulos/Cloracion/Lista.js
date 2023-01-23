@@ -13,7 +13,7 @@ const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
-  color: theme.palette.text.secondary,
+  color: theme.palette.text.secondary
 }));
 
 function handleClick(event) {
@@ -39,19 +39,8 @@ function Lista() {
 
         </Grid>
       </Box>
-      
-      <Box
-        component="span"
-        m={1}
-        display="flex"
-        justifyContent="space-between"
-        alignItems="center"
-        xs={1} >
-        <Acciones />
-      </Box>
-
+      <Acciones />
     </div>
   )
 }
-
 export default Lista;

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import AddIcon from '@mui/icons-material/Add';
 import AutorenewIcon from '@mui/icons-material/Autorenew';
@@ -9,7 +10,13 @@ import Grid from '@mui/material/Grid';
 
 function Acciones() {
   return (
-    <div>
+    <Box
+        component="span"
+        m={1}
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        xs={1} >
       <Button variant="outlined" color="inherit" style={{ height: '30px' }}>
         <ChevronLeftIcon/>
         Volver
@@ -30,7 +37,7 @@ function Acciones() {
           Exportar XLS
         </Button>
       </Grid>
-    </div>
+    </Box>
   );
 }
 
