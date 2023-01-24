@@ -15,23 +15,36 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
   }));
 
-function Navegacion() {    
+function Navegacion(props) {
     const [age, setAge] = React.useState('');
     const handleChange = (event) => {
         setAge(event.target.value);
     };
 
+    console.log(props);
+
+    /*
+    <Breadcrumbs aria-label="breadcrumb" sx={{marginLeft:1}}>
+      <Link underline="hover" color="inherit" href="#">
+        {props.tab}
+      </Link>
+      <Typography color="text.primary">Cloración</Typography>
+    </Breadcrumbs>
+    */
+
     return (
-        <Box xs={{ flexGrow: 1 }}>
+      <Box xs={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Item>
+
               <Breadcrumbs aria-label="breadcrumb" sx={{marginLeft:1}}>
-                <Link underline="hover" color="inherit" href="/material-ui/getting-started/installation/">
-                  Lista de Encuestas
+                <Link underline="hover" color="inherit" href="#">
+                  {props.tab}
                 </Link>
                 <Typography color="text.primary">Cloración</Typography>
               </Breadcrumbs>
+
             </Item>
           </Grid>
         </Grid>

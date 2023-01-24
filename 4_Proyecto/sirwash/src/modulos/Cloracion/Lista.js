@@ -16,17 +16,15 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary
 }));
 
-function handleClick(event) {
-  event.preventDefault();
-  console.info('You clicked a breadcrumb.');
-}
-
 function Lista() {
   return (
     <div>
-      <Navegacion/>
+
+      <Navegacion tab="Lista de Encuestas"/>
+
       <Box xs={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
+
           <Grid item xs={12}>
             <Item>
               <Filtro />
@@ -39,7 +37,9 @@ function Lista() {
 
         </Grid>
       </Box>
+
       <Acciones />
+      
     </div>
   )
 }

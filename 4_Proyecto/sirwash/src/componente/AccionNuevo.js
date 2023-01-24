@@ -2,9 +2,9 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import AddIcon from '@mui/icons-material/Add';
-import AutorenewIcon from '@mui/icons-material/Autorenew';
-import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
+import SaveIcon from '@mui/icons-material/Save';
+import CloseIcon from '@mui/icons-material/Close';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 import Grid from '@mui/material/Grid';
 
@@ -14,10 +14,9 @@ const manejarClic = () => {
   } catch(error) {
     console.error(error.message);
   }
-  //setNumClics(numClics + 1);
 }
 
-function Acciones() {
+function AccionNuevo() {
   return (
     <Box component="span" m={1} display="flex" justifyContent="space-between" alignItems="center" xs={1}>
 
@@ -27,19 +26,21 @@ function Acciones() {
       </Button>
 
       <Grid item xs={12} display="flex" justifyContent="flex-end">
-        <Button variant="outlined" size="small" color="inherit" sx={{marginLeft:'5px'}}>
-          <AutorenewIcon sx={{fontSize:18,marginRight:1}}/>
-          Actualizar
-        </Button>
+        
 
         <Button variant="contained" size="small" color="primary" sx={{marginLeft:'5px'}}>
-          <AddIcon sx={{fontSize:18,marginRight:1}}/>
-          Nuevo Registro
+          <SaveIcon sx={{fontSize:18,marginRight:1}}/>
+          Guardar
         </Button>
         
-        <Button variant="contained" size="small" color="success" sx={{marginLeft:'5px'}}>
-          <CloudDownloadIcon sx={{fontSize:18,marginRight:1}}/>
-          Exportar XLS
+        <Button variant="outlined" size="small" color="inherit" sx={{marginLeft:'5px'}}>
+          <DeleteIcon sx={{fontSize:18,marginRight:1}}/>
+          Limpiar
+        </Button>
+
+        <Button variant="outlined" size="small" color="inherit" sx={{marginLeft:'5px'}}>
+          <CloseIcon sx={{fontSize:18,marginRight:1}}/>
+          Cancelar
         </Button>
       </Grid>
 
@@ -47,4 +48,4 @@ function Acciones() {
   );
 }
 
-export default Acciones;
+export default AccionNuevo;

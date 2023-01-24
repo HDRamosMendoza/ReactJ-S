@@ -19,6 +19,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 function Filtro() {
     const [value, setValue] = React.useState('');
     const handleChangeDate = (newValue) => { setValue(newValue); };
+    
     /*const [value, setValue] = React.useState(dayjs('2014-08-18T21:11:54'));*/
     const [recolector, setRecolector] = React.useState('');
     const handleChange = (event) => { setRecolector(event.target.value); };
@@ -34,15 +35,15 @@ function Filtro() {
             <Grid item xs={6} display="flex" justifyContent="flex-start">
 
                 <LocalizationProvider dateAdapter={AdapterDayjs} >
-                <Stack spacing={2}>
-                    <MobileDatePicker   
-                    label="Fecha de Inicio"
-                    inputFormat="DD/MM/YYYY"
-                    value={value} 
-                    onChange={handleChange} 
-                    renderInput={(params) => <TextField {...params} size="small" sx={{marginRight:1}}/>}
-                    />
-                </Stack>
+                    <Stack spacing={2}>
+                        <MobileDatePicker   
+                        label="Fecha de Inicio"
+                        inputFormat="DD/MM/YYYY"
+                        value={value} 
+                        onChange={handleChange} 
+                        renderInput={(params) => <TextField {...params} size="small" sx={{marginRight:1}}/>}
+                        />
+                    </Stack>
                 </LocalizationProvider>
 
                 <LocalizationProvider dateAdapter={AdapterDayjs} sx={{marginLeft:2}}>
