@@ -37,7 +37,7 @@ export function Navegacion_02({nav_01, nav_02}) {
             <Item>
               <Breadcrumbs aria-label="breadcrumb" sx={{marginLeft:1,fontSize:'12px'}}>
                 <Link underline="hover" color="inherit" href="#">{nav_01}</Link>
-                <Typography color="text.primary" sx={{fontSize:'12px'}}>{nav_02}</Typography>
+                <Typography color="text.primary" sx={{fontSize:'12px'}}><strong>{nav_02}</strong></Typography>
               </Breadcrumbs>
             </Item>
           </Grid>
@@ -56,7 +56,7 @@ export function Navegacion_03({nav_01, nav_02, nav_03}) {
             <Breadcrumbs aria-label="breadcrumb" sx={{marginLeft:1,fontSize:'12px'}}>
               <Link underline="hover" color="inherit" href="#">{nav_01}</Link>
               <Link underline="hover" color="inherit" href="#">{nav_02}</Link>
-              <Typography color="text.primary" sx={{fontSize:'12px'}}>{nav_03}</Typography>
+              <Typography color="text.primary" sx={{fontSize:'12px'}}><strong>{nav_03}</strong></Typography>
             </Breadcrumbs>
 
           </Item>

@@ -14,6 +14,7 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
 
 import {Navegacion_03} from '../../Componente/Navegacion';
+import Titulo from '../../Componente/Titulo';
 import AccionNuevo from '../../Componente/AccionNuevo';
 
 import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
@@ -28,83 +29,85 @@ import ListItemText from '@mui/material/ListItemText';
 import FolderIcon from '@mui/icons-material/Folder';
 
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary
-}));
+const NAV_01 = "Lista de Encuestas";
+const NAV_02 = "Cloración";
+const NAV_03 = "Nueva Cloración";
 
-const currencies = [
+const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: theme.palette.text.secondary
+  }));
+  
+  const currencies = [
+      {
+        value: '0',
+        label: 'NO',
+      },
+      {
+        value: '1',
+        label: 'SI',
+      }
+  ];
+  
+  let _listaCentroPoblado = [
     {
-      value: '0',
-      label: 'NO',
+      value: '00',
+      label: 'Seleccionar Centro Poblado'
     },
     {
-      value: '1',
-      label: 'SI',
+      value: '01',
+      label: 'Centro Poblado 01'
+    },
+    {
+      value: '02',
+      label: 'Centro Poblado 02'
     }
-];
-
-let _listaCentroPoblado = [
-  {
-    value: '00',
-    label: 'Seleccionar Centro Poblado'
-  },
-  {
-    value: '01',
-    label: 'Centro Poblado 01'
-  },
-  {
-    value: '02',
-    label: 'Centro Poblado 02'
-  }
-];
-
-let _listaSAP = [
-  {
-    value: '00',
-    label: 'Seleccionar SAP - Sistema de Agua Potable'
-  },
-  {
-    value: '01',
-    label: 'Sistema de Agua Potable 01'
-  },
-  {
-    value: '02',
-    label: 'Sistema de Agua Potable 02'
-  }
-];
-
-let _listaComponentes = [
-  {
-    value: '00',
-    label: 'Seleccionar Componente'
-  },
-  {
-    value: '01',
-    label: 'Reservorio'
-  },
-  {
-    value: '02',
-    label: 'Primera Vivienda'
-  },
-  {
-    value: '03',
-    label: 'Vivienda Intermedia'
-  },
-  {
-    value: '04',
-    label: 'Última Vivienda'
-  }
-];
-
-/* <Box component="form" justifyContent="flex-start" sx={{ '& .MuiTextField-root': { m: 1, width: '40ch' }, }} noValidate autoComplete="off"> */
-function NuevoRegistro() {
-
-  const [dense, setDense] = React.useState(false);
+  ];
   
+  let _listaSAP = [
+    {
+      value: '00',
+      label: 'Seleccionar SAP - Sistema de Agua Potable'
+    },
+    {
+      value: '01',
+      label: 'Sistema de Agua Potable 01'
+    },
+    {
+      value: '02',
+      label: 'Sistema de Agua Potable 02'
+    }
+  ];
+  
+  let _listaComponentes = [
+    {
+      value: '00',
+      label: 'Seleccionar Componente'
+    },
+    {
+      value: '01',
+      label: 'Reservorio'
+    },
+    {
+      value: '02',
+      label: 'Primera Vivienda'
+    },
+    {
+      value: '03',
+      label: 'Vivienda Intermedia'
+    },
+    {
+      value: '04',
+      label: 'Última Vivienda'
+    }
+  ];
+
+function ListaCloracion() {
+  const [dense, setDense] = React.useState(false);
+
   const [value, setValue] = React.useState('');
   const [recolector, setRecolector] = React.useState('');
   const handleChange = (event) => {
@@ -113,20 +116,19 @@ function NuevoRegistro() {
 
   return (
     <div>
-      <Navegacion_03 nav_01="Lista de Encuestas" nav_02="Cloración" nav_03="Nuevo Registro" />
-
-      <Box xs={1} >
-       
-
-          <Grid item xs={12} spacing={1}>
+      <Navegacion_03 nav_01={NAV_01} nav_02={NAV_02}  nav_03={NAV_03} />
+      <Box xs={{ flexGrow: 1 }}>
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
             <Item>
+
+              
+
               <Box component="span" m={1} display="flex" justifyContent="space-between" alignItems="center" xs={1}>
-                <Grid item xs={8} display="flex" justifyContent="flex-start" sx={{borderBottom:"2px solid #666"}}>
-                  <Typography variant="h5" component="h2">
-                    &nbsp;<strong>Nuevo Registro</strong>&nbsp;
-                  </Typography>
+                <Grid item xs={11} display="flex" justifyContent="flex-start">
+                  <Titulo name={NAV_03}/>
                 </Grid>
-                <Grid item xs={4} display="flex" justifyContent="flex-end">
+                <Grid item xs={2} display="flex" justifyContent="flex-end">
                   <TextField
                     id=""
                     select
@@ -251,15 +253,16 @@ function NuevoRegistro() {
                 
               </Box>
 
+                <AccionNuevo />
             </Item>
           </Grid>
-
-    
+        </Grid>
       </Box>
 
-      <AccionNuevo />
       
+    
     </div>
   )
-}
-export default NuevoRegistro;
+};
+
+export default ListaCloracion;

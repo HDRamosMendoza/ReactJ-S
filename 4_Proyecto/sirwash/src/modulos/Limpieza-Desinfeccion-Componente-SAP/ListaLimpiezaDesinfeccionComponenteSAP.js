@@ -15,6 +15,7 @@ import {useSate} from 'react';
 
 const NAV_01 = "Lista de Encuestas";
 const NAV_02 = "Desinfección de Componente del SAP";
+const URL_NUEVO = "/ListaDeEncuestas/Cloracion/NuevaLimpiezaDesinfeccionComponenteSAP";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -108,6 +109,7 @@ function ListaLimpiezaDesinfeccionComponenteSAP() {
               <TableGrid />
               <Acciones 
                 _volver = {_volver} 
+                _urlNuevo = {URL_NUEVO}   
                 _actualizarRegistro = {_actualizarRegistro} 
                 _nuevoRegistro = {_nuevoRegistro} 
                 _exportarRegistro = {_exportarRegistro} />

@@ -15,6 +15,7 @@ import {useSate} from 'react';
 
 const NAV_01 = "Lista de Encuestas";
 const NAV_02 = "Cloración";
+const URL_NUEVO = "/ListaDeEncuestas/Cloracion/NuevaCloracion";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -34,8 +35,6 @@ const _buscar = (_fechaInicio, _fechaFin, _colector) => {
     if(_fechaFin) {
       console.log(new Date(_fechaFin["$d"]).toLocaleDateString("es"));
     }
-    
-    
     
     console.log(_colector);
   } catch (error) {
@@ -77,6 +76,7 @@ const _nuevoRegistro = () => {
   try {
 
     console.log("Nuevo");
+    //ListaDeEncuestas/Cloracion/NuevaCloracion
 
   } catch (error) {
     console.error(`Error - _nuevoRegistro : ${error.name} - ${error.message}`);
@@ -108,6 +108,7 @@ function ListaCloracion() {
               <TableGrid />
               <Acciones 
                 _volver = {_volver} 
+                _urlNuevo = {URL_NUEVO} 
                 _actualizarRegistro = {_actualizarRegistro} 
                 _nuevoRegistro = {_nuevoRegistro} 
                 _exportarRegistro = {_exportarRegistro} />

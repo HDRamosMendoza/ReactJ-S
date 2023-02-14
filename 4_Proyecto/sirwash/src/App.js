@@ -10,9 +10,10 @@ import Dashboard from './pages/Dashboard';
 import ListaMedicionCloroResidual from './modulos/Medicion-Cloro-Residual/ListaMedicionCloroResidual';
 import ListaContinuidadServicio from './modulos/Continuidad-Servicio/ListaContinuidadServicio';
 import ListaLimpiezaDesinfeccionComponenteSAP from './modulos/Limpieza-Desinfeccion-Componente-SAP/ListaLimpiezaDesinfeccionComponenteSAP';
-import ListaCloracion from './modulos/Cloracion/ListaCloracion';
-/* Nuevo Registro */
 
+import ListaCloracion from './modulos/Cloracion/ListaCloracion';
+import NuevaCloracion from './modulos/Cloracion/NuevaCloracion';
+/* Nuevo Registro */
 
 //<Route path="ListaDeEncuestas/LimpiezaDesinfeccionComponenteSAP" element={<ListaLimpiezaDesinfeccionComponenteSAP />}/>
 
@@ -29,7 +30,9 @@ function App() {
           <Route path="ListaDeEncuestas/MedicionCloroResidual" element={<ListaMedicionCloroResidual />}/>
           <Route path="ListaDeEncuestas/ContinuidadServicio" element={<ListaContinuidadServicio />}/>
           <Route path="ListaDeEncuestas/LimpiezaDesinfeccionComponenteSAP" element={<ListaLimpiezaDesinfeccionComponenteSAP />}/>
+
           <Route path="ListaDeEncuestas/Cloracion" element={<ListaCloracion />}/>
+          <Route path="ListaDeEncuestas/Cloracion/NuevaCloracion" element={<NuevaCloracion />}/>
         </Route>
       </Routes>
       

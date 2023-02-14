@@ -28,6 +28,7 @@ const manejarClic = () => {
 /* Propiedad de sintaxis desectructuracion */
 function Acciones({
   _volver,
+  _urlNuevo,
   _actualizarRegistro,
   _nuevoRegistro,
   _exportarRegistro
@@ -65,7 +66,7 @@ function Acciones({
           sx={{marginLeft:'5px'}} 
           onClick={_nuevoRegistro} >
           <AddIcon sx={{fontSize:18,marginRight:1}}/>
-          <Link to="/dashboard">Nuevo Registro</Link>
+          <Link to={_urlNuevo}>Nuevo Registro</Link>
         </Button>
         
         <Button 
