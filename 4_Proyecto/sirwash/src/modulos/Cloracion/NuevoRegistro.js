@@ -13,7 +13,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
 
-import Navegacion from '../../Componente/Navegacion';
+import {Navegacion_03} from '../../Componente/Navegacion';
 import AccionNuevo from '../../Componente/AccionNuevo';
 
 import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
@@ -113,9 +113,7 @@ function NuevoRegistro() {
 
   return (
     <div>
-        
-
-      <Navegacion tab="Lista de Encuestas"/>
+      <Navegacion_03 nav_01="Lista de Encuestas" nav_02="Cloración" nav_03="Nuevo Registro" />
 
       <Box xs={1} >
        

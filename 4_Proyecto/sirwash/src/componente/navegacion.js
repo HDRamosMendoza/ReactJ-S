@@ -15,13 +15,11 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
   }));
 
-function Navegacion(props) {
+export function Navegacion_02({nav_01, nav_02}) {
     const [age, setAge] = React.useState('');
     const handleChange = (event) => {
         setAge(event.target.value);
     };
-
-    console.log(props);
 
     /*
     <Breadcrumbs aria-label="breadcrumb" sx={{marginLeft:1}}>
@@ -37,14 +35,10 @@ function Navegacion(props) {
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Item>
-
-              <Breadcrumbs aria-label="breadcrumb" sx={{marginLeft:1}}>
-                <Link underline="hover" color="inherit" href="#">
-                  {props.tab}
-                </Link>
-                <Typography color="text.primary">Cloración</Typography>
+              <Breadcrumbs aria-label="breadcrumb" sx={{marginLeft:1,fontSize:'12px'}}>
+                <Link underline="hover" color="inherit" href="#">{nav_01}</Link>
+                <Typography color="text.primary" sx={{fontSize:'12px'}}>{nav_02}</Typography>
               </Breadcrumbs>
-
             </Item>
           </Grid>
         </Grid>
@@ -52,4 +46,24 @@ function Navegacion(props) {
   );
 }
 
-export default Navegacion;
+export function Navegacion_03({nav_01, nav_02, nav_03}) {
+  return (
+    <Box xs={{ flexGrow: 1 }}>
+      <Grid container spacing={2}>
+        <Grid item xs={12}>
+          <Item>
+
+            <Breadcrumbs aria-label="breadcrumb" sx={{marginLeft:1,fontSize:'12px'}}>
+              <Link underline="hover" color="inherit" href="#">{nav_01}</Link>
+              <Link underline="hover" color="inherit" href="#">{nav_02}</Link>
+              <Typography color="text.primary" sx={{fontSize:'12px'}}>{nav_03}</Typography>
+            </Breadcrumbs>
+
+          </Item>
+        </Grid>
+      </Grid>
+    </Box>
+);
+}
+
+//export default Navegacion;
