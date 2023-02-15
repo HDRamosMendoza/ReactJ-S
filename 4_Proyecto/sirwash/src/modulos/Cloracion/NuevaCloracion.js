@@ -27,12 +27,12 @@ const URL_02 = "/ListaDeEncuestas/Cloracion";
 const NAV_03 = "Nueva Cloración";
 
 const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary
-  }));
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary
+}));
 
 const _guardar = () => { 
   try {
@@ -60,91 +60,91 @@ const _cancelar = () => {
 }
 
 const currencies = [
-    {
-      value: '0',
-      label: 'NO',
-    },
-    {
-      value: '1',
-      label: 'SI',
-    }
+  {
+    value: '0',
+    label: 'NO',
+  },
+  {
+    value: '1',
+    label: 'SI',
+  }
 ];
   
-  let _listaCentroPoblado = [
-    {
-      value: '00',
-      label: 'Seleccionar Centro Poblado'
-    },
-    {
-      value: '01',
-      label: 'Centro Poblado 01'
-    },
-    {
-      value: '02',
-      label: 'Centro Poblado 02'
-    }
-  ];
+let _listaCentroPoblado = [
+  {
+    value: '00',
+    label: 'Seleccionar Centro Poblado'
+  },
+  {
+    value: '01',
+    label: 'Centro Poblado 01'
+  },
+  {
+    value: '02',
+    label: 'Centro Poblado 02'
+  }
+];
   
-  let _listaSAP = [
-    {
-      value: '00',
-      label: 'Seleccionar SAP - Sistema de Agua Potable'
-    },
-    {
-      value: '01',
-      label: 'Sistema de Agua Potable 01'
-    },
-    {
-      value: '02',
-      label: 'Sistema de Agua Potable 02'
-    }
-  ];
+let _listaSAP = [
+  {
+    value: '00',
+    label: 'Seleccionar SAP - Sistema de Agua Potable'
+  },
+  {
+    value: '01',
+    label: 'Sistema de Agua Potable 01'
+  },
+  {
+    value: '02',
+    label: 'Sistema de Agua Potable 02'
+  }
+];
   
-  let _listaComponentes = [
-    {
-      value: '00',
-      label: 'Seleccionar Componente'
-    },
-    {
-      value: '01',
-      label: 'Reservorio'
-    },
-    {
-      value: '02',
-      label: 'Primera Vivienda'
-    },
-    {
-      value: '03',
-      label: 'Vivienda Intermedia'
-    },
-    {
-      value: '04',
-      label: 'Última Vivienda'
-    }
-  ];
+let _listaComponentes = [
+  {
+    value: '00',
+    label: 'Seleccionar Componente'
+  },
+  {
+    value: '01',
+    label: 'Reservorio'
+  },
+  {
+    value: '02',
+    label: 'Primera Vivienda'
+  },
+  {
+    value: '03',
+    label: 'Vivienda Intermedia'
+  },
+  {
+    value: '04',
+    label: 'Última Vivienda'
+  }
+];
 
-  let _listaInsumo = [
-    {
-      value: '00',
-      label: 'Seleccionar Insumo'
-    },
-    {
-      value: '01',
-      label: 'Insumo 01'
-    },
-    {
-      value: '02',
-      label: 'Insumo 02'
-    },
-    {
-      value: '03',
-      label: 'Insumo 03'
-    },
-    {
-      value: '04',
-      label: 'Insumo 04'
-    }
-  ];
+let _listaInsumo = [
+  {
+    value: '00',
+    label: 'Seleccionar Insumo'
+  },
+  {
+    value: '01',
+    label: 'Insumo 01'
+  },
+  {
+    value: '02',
+    label: 'Insumo 02'
+  },
+  {
+    value: '03',
+    label: 'Insumo 03'
+  },
+  {
+    value: '04',
+    label: 'Insumo 04'
+  }
+];
 
 function ListaCloracion() {
   const [dense, setDense] = React.useState(false);
@@ -156,9 +156,9 @@ function ListaCloracion() {
   };
 
   const [fecha, setFecha] = React.useState(null);
-    const _changeFecha = (event) => { 
-        setFecha(event);
-    };
+  const _changeFecha = (event) => { 
+    setFecha(event);
+  };
 
   return (
     <div>

@@ -14,7 +14,7 @@ import {useSate} from 'react';
 */
 
 const NAV_01 = "Lista de Encuestas";
-const NAV_02 = "Desinfección de Componente del SAP";
+const NAV_02 = "Limpieza y Desinfección de Componente del SAP";
 const URL_NUEVO = "/ListaDeEncuestas/LimpiezaDesinfeccionComponenteSAP/NuevaLimpiezaDesinfeccionComponenteSAP";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -25,7 +25,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary
 }));
 
-const _buscar = (_fechaInicio, _fechaFin, _colector) => { 
+const _buscar = (_fechaInicio, _fechaFin, _colector) => {
   try {
     if(_fechaInicio) {
       console.log(new Date(_fechaInicio["$d"]).toLocaleDateString("es"));
