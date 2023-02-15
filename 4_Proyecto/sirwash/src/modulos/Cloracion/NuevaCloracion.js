@@ -19,6 +19,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import '../../style/Cloracion.css'
 
 const NAV_01 = "Lista de Encuestas";
 const URL_01 = "/home";
