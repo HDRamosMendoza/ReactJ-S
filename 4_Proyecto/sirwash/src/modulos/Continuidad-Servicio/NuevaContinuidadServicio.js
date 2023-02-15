@@ -21,7 +21,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
-import '../../style/ContinuidadServicio.css'
+import '../../style/ContinuidadServicio.css';
 
 const NAV_01 = "Lista de Encuestas";
 const URL_01 = "/home";

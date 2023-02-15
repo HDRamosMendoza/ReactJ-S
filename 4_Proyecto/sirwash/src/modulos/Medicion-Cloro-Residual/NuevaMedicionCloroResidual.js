@@ -20,7 +20,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
-import '../../style/MedicionCloroResidual.css'
+import '../../style/MedicionCloroResidual.css';
 
 const NAV_01 = "Lista de Encuestas";
 const URL_01 = "/home";
