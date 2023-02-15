@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
+import Divider from '@mui/material/Divider';
 
 import Stack from '@mui/material/Stack';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -30,7 +31,9 @@ import FolderIcon from '@mui/icons-material/Folder';
 
 
 const NAV_01 = "Lista de Encuestas";
+const URL_01 = "/home";
 const NAV_02 = "Cloración";
+const URL_02 = "/ListaDeEncuestas/Cloracion";
 const NAV_03 = "Nueva Cloración";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -40,17 +43,42 @@ const Item = styled(Paper)(({ theme }) => ({
     textAlign: 'center',
     color: theme.palette.text.secondary
   }));
-  
-  const currencies = [
-      {
-        value: '0',
-        label: 'NO',
-      },
-      {
-        value: '1',
-        label: 'SI',
-      }
-  ];
+
+const _guardar = () => { 
+  try {
+    /* FALTA AGREGAR CAMPO PARA GUARDAR */
+    console.log("Guardar");
+  } catch (error) {
+    console.error(`Error - _guardar : ${error.name} - ${error.message}`);
+  }
+}
+
+const _limpiar = () => { 
+  try {
+    console.log("Limpiar");
+  } catch (error) {
+    console.error(`Error - _limpiar : ${error.name} - ${error.message}`);
+  }
+}
+
+const _cancelar = () => { 
+  try {
+    console.log("Cancelar");
+  } catch (error) {
+    console.error(`Error - _cancelar : ${error.name} - ${error.message}`);
+  }
+}
+
+const currencies = [
+    {
+      value: '0',
+      label: 'NO',
+    },
+    {
+      value: '1',
+      label: 'SI',
+    }
+];
   
   let _listaCentroPoblado = [
     {
@@ -105,6 +133,29 @@ const Item = styled(Paper)(({ theme }) => ({
     }
   ];
 
+  let _listaInsumo = [
+    {
+      value: '00',
+      label: 'Seleccionar Insumo'
+    },
+    {
+      value: '01',
+      label: 'Insumo 01'
+    },
+    {
+      value: '02',
+      label: 'Insumo 02'
+    },
+    {
+      value: '03',
+      label: 'Insumo 03'
+    },
+    {
+      value: '04',
+      label: 'Insumo 04'
+    }
+  ];
+
 function ListaCloracion() {
   const [dense, setDense] = React.useState(false);
 
@@ -116,15 +167,22 @@ function ListaCloracion() {
 
   return (
     <div>
-      <Navegacion_03 nav_01={NAV_01} nav_02={NAV_02}  nav_03={NAV_03} />
+      <Navegacion_03 
+        nav_01={NAV_01} 
+        url_01={URL_01} 
+        nav_02={NAV_02} 
+        url_02={URL_02} 
+        nav_03={NAV_03} />
       <Box xs={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Item>
 
-              
-
-              <Box component="span" m={1} display="flex" justifyContent="space-between" alignItems="center" xs={1}>
+              <Box component="span" m={1} 
+                display="flex" 
+                justifyContent="space-between" 
+                alignItems="left" 
+                xs={1}>
                 <Grid item xs={11} display="flex" justifyContent="flex-start">
                   <Titulo name={NAV_03}/>
                 </Grid>
@@ -143,15 +201,13 @@ function ListaCloracion() {
                   </TextField>
                 </Grid>
               </Box>
-              
-              
 
-              <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
+              <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2} sx={{p:2}}>
                 <Box gridColumn="span 4">                  
                   <TextField 
                     id="" select fullWidth 
-                    label="Centro Poblado" defaultValue="00" 
-                    helperText="Donde se realiza la actividad" size="small">
+                    label="Centro Poblado - Donde se realiza la actividad" defaultValue="00" 
+                    size="small">
                     {
                       _listaCentroPoblado.map((option) => (
                         <MenuItem key={option.value} value={option.value} >
@@ -186,74 +242,98 @@ function ListaCloracion() {
                       </Stack>
                     </LocalizationProvider>
                 </Box>
+              </Box>
 
+              <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2} sx={{p:2}}>
                 <Box gridColumn="span 4">
-                  <Box gridColumn="span 4">
-                    <TextField 
-                      id="" select fullWidth 
-                      label="Componente" defaultValue="00" 
-                      helperText="" size="small">
-                      {
-                        _listaComponentes.map((option) => (
-                          <MenuItem key={option.value} value={option.value} >
-                            {option.label}
-                          </MenuItem>
-                        ))
-                      }
-                    </TextField>
-                  </Box>
-
-
-                  <Box gridColumn="span 4">
-                    <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
-                      <Box gridColumn="span 4">
-                        <List>
-                          <ListItem sx={{fontSize:12, fontWeight: "bold"}} >
-                            <ListItemText primary="Sustento"/>
-                          </ListItem>
-                        </List>
-                      </Box>
-                      <Box gridColumn="span 8">
-                        <List>
-                          <ListItem sx={{padding:0}}>
-                            <ListItemIcon>
-                              <AddAPhotoIcon sx={{fontSize: 17}}/>
-                            </ListItemIcon>
-                            <ListItemText secondary="Foto de Actividad (obligatorio)"/>
-                          </ListItem>
-                          <ListItem sx={{padding:0}}>
-                            <ListItemIcon>
-                              <AddAPhotoIcon sx={{fontSize:17}}/>
-                            </ListItemIcon>
-                            <ListItemText secondary="Foto de Acta (facultativo)"/>
-                          </ListItem>
-                        </List>
-                      </Box>
+                  <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
+                    <Box gridColumn="span 12">
+                      <TextField 
+                        select fullWidth 
+                        label="Componente" defaultValue="00" 
+                        helperText="" size="small">
+                        {
+                          _listaComponentes.map((option) => (
+                            <MenuItem key={option.value} value={option.value} >
+                              {option.label}
+                            </MenuItem>
+                          ))
+                        }
+                      </TextField>
                     </Box>
 
-                    <Button variant="outlined" href="#outlined-buttons" fullWidth>
-                      <AddAPhotoIcon  sx={{fontSize:18,marginRight:2}}/>
-                      Adjuntar Foto
-                    </Button>  
+                    <Box gridColumn="span 12">
+                      <TextField 
+                        select fullWidth 
+                        label="Insumo" defaultValue="00" 
+                        helperText="" size="small">
+                        {
+                          _listaInsumo.map((option) => (
+                            <MenuItem key={option.value} value={option.value} >
+                              {option.label}
+                            </MenuItem>
+                          ))
+                        }
+                      </TextField>
+                    </Box>
+                  
+                    <Box gridColumn="span 12">
+                      <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
+                        <Box gridColumn="span 4">
+                          <List>
+                            <ListItem sx={{fontSize:17, fontWeight: "bold"}} >
+                              <ListItemText primary="Sustento"/>
+                            </ListItem>
+                          </List>
+                        </Box>
+                        <Box gridColumn="span 8">
+                          <List>
+                            <ListItem sx={{padding:0}}>
+                              <ListItemIcon>
+                                <AddAPhotoIcon sx={{fontSize: 17}}/>
+                              </ListItemIcon>
+                              <ListItemText secondary="Foto de Actividad (obligatorio)"/>
+                            </ListItem>
+                            <ListItem sx={{padding:0}}>
+                              <ListItemIcon>
+                                <AddAPhotoIcon sx={{fontSize:17}}/>
+                              </ListItemIcon>
+                              <ListItemText secondary="Foto de Acta (facultativo)"/>
+                            </ListItem>
+                          </List>
+                        </Box>
+                      </Box>
+
+                      <Button variant="outlined" href="#outlined-buttons" fullWidth>
+                        <AddAPhotoIcon  sx={{fontSize:18,marginRight:2}}/>
+                        Adjuntar Foto
+                      </Button>  
+                    </Box>
                   </Box>
                 </Box>
 
-                <Box gridColumn="span 8">
-                  
-                </Box>
+                <Box gridColumn="span 8" sx={{ p: 2, border: '1px dashed grey' }}></Box>
 
+              </Box>
+
+              <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2} sx={{p:2}}>
                 <Box gridColumn="span 12">
                   <TextField
-                    id="" fullWidth multiline 
+                    fullWidth multiline 
                     label="Observaciones" rows={2} 
                     placeholder="Ingrese observaciones"
                   />
                 </Box>
-                
-                
               </Box>
 
-                <AccionNuevo />
+              <Divider variant="middle" sx={{ width: '100%'}}/>
+
+              <AccionNuevo 
+                _volver={URL_02} 
+                _guardar={()=>_guardar()} 
+                _limpiar={_limpiar}  
+                _cancelar={_cancelar} />
+
             </Item>
           </Grid>
         </Grid>

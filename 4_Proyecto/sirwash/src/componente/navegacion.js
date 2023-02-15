@@ -16,11 +16,6 @@ const Item = styled(Paper)(({ theme }) => ({
   }));
 
 export function Navegacion_02({nav_01, nav_02}) {
-    const [age, setAge] = React.useState('');
-    const handleChange = (event) => {
-        setAge(event.target.value);
-    };
-
     /*
     <Breadcrumbs aria-label="breadcrumb" sx={{marginLeft:1}}>
       <Link underline="hover" color="inherit" href="#">
@@ -46,7 +41,7 @@ export function Navegacion_02({nav_01, nav_02}) {
   );
 }
 
-export function Navegacion_03({nav_01, nav_02, nav_03}) {
+export function Navegacion_03({nav_01, url_01, nav_02, url_02, nav_03}) {
   return (
     <Box xs={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
@@ -54,8 +49,8 @@ export function Navegacion_03({nav_01, nav_02, nav_03}) {
           <Item>
 
             <Breadcrumbs aria-label="breadcrumb" sx={{marginLeft:1,fontSize:'12px'}}>
-              <Link underline="hover" color="inherit" href="#">{nav_01}</Link>
-              <Link underline="hover" color="inherit" href="#">{nav_02}</Link>
+              <Link underline="hover" color="inherit" href={url_01}>{nav_01}</Link>
+              <Link underline="hover" color="inherit" href={url_02}>{nav_02}</Link>
               <Typography color="text.primary" sx={{fontSize:'12px'}}><strong>{nav_03}</strong></Typography>
             </Breadcrumbs>
 
