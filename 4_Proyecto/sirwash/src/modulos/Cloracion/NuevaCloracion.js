@@ -294,13 +294,13 @@ function ListaCloracion() {
                               <ListItemIcon>
                                 <AddAPhotoIcon sx={{fontSize:17}}/>
                               </ListItemIcon>
-                              <ListItemText secondary="Foto de Acta (facultativo)"/>
+                              <ListItemText secondary="Foto de Registro de Cloración del Prestador/Operador (obligatorio)"/>
                             </ListItem>
                           </List>
                         </Box>
                       </Box>
 
-                      <Button variant="outlined" href="#outlined-buttons" fullWidth>
+                      <Button variant="outlined"  fullWidth>
                         <AddAPhotoIcon  sx={{fontSize:18,marginRight:2}}/>
                         Adjuntar Foto
                       </Button>  

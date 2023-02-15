@@ -20,6 +20,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
+import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 
 const NAV_01 = "Lista de Encuestas";
 const URL_01 = "/home";
@@ -301,6 +302,16 @@ function NuevaContinuidadServicio() {
                         }
                       </TextField>
                     </Box>
+
+                    <Box gridColumn="span 12">
+                      <Button 
+                        variant="contained"
+                        startIcon={<CloudDownloadIcon />}>
+                        Descargar Declaración Jurada
+                      </Button>
+                    </Box>
+
+                    
                   
                     <Box gridColumn="span 12">
                       <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
@@ -317,19 +328,13 @@ function NuevaContinuidadServicio() {
                               <ListItemIcon>
                                 <AddAPhotoIcon sx={{fontSize: 17}}/>
                               </ListItemIcon>
-                              <ListItemText secondary="Foto de Actividad (obligatorio)"/>
-                            </ListItem>
-                            <ListItem sx={{padding:0}}>
-                              <ListItemIcon>
-                                <AddAPhotoIcon sx={{fontSize:17}}/>
-                              </ListItemIcon>
-                              <ListItemText secondary="Foto de Acta (facultativo)"/>
+                              <ListItemText secondary="Foto de Declaración Jurada (obligatorio)"/>
                             </ListItem>
                           </List>
                         </Box>
                       </Box>
 
-                      <Button variant="outlined" href="#outlined-buttons" fullWidth>
+                      <Button variant="outlined" fullWidth>
                         <AddAPhotoIcon  sx={{fontSize:18,marginRight:2}}/>
                         Adjuntar Foto
                       </Button>  

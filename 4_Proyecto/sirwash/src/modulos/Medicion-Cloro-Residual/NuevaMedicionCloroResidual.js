@@ -294,7 +294,7 @@ function NuevaMedicionCloroResidual() {
                         </Box>
                       </Box>
 
-                      <Button variant="outlined" href="#outlined-buttons" fullWidth>
+                      <Button variant="outlined" fullWidth>
                         <AddAPhotoIcon  sx={{fontSize:18,marginRight:2}}/>
                         Adjuntar Foto
                       </Button>  
