@@ -18,15 +18,25 @@ const manejarClic = () => {
 
 function AccionNuevo({_volver, _guardar, _limpiar, _cancelar}) {
   return (
-    <Box component="span" m={1} display="flex" justifyContent="space-between" alignItems="center" xs={1}>
+    <Box 
+      component="span" 
+      m={1} 
+      display="flex" 
+      justifyContent="space-between" 
+      alignItems="center" 
+      xs={1} 
+      sx={{p:2}}>
 
       <Button variant="outlined" color="inherit" style={{height:'30px'}}>
         <ChevronLeftIcon/>
         <Link to={_volver}>Volver</Link>  
       </Button>
 
-      <Grid item xs={12} display="flex" justifyContent="flex-end">
-        
+      <Grid 
+        item xs={12} 
+        display="flex" 
+        justifyContent="flex-end">
+
         <Button 
           variant="contained" 
           size="small" 
@@ -60,6 +70,6 @@ function AccionNuevo({_volver, _guardar, _limpiar, _cancelar}) {
 
     </Box>
   );
-}
+};
 
 export default AccionNuevo;

@@ -165,6 +165,11 @@ function ListaCloracion() {
     setRecolector(event.target.value);
   };
 
+  const [fecha, setFecha] = React.useState(null);
+    const _changeFecha = (event) => { 
+        setFecha(event);
+    };
+
   return (
     <div>
       <Navegacion_03 
@@ -188,7 +193,6 @@ function ListaCloracion() {
                 </Grid>
                 <Grid item xs={2} display="flex" justifyContent="flex-end">
                   <TextField
-                    id=""
                     select
                     label="Validado"
                     defaultValue="0"
@@ -202,7 +206,7 @@ function ListaCloracion() {
                 </Grid>
               </Box>
 
-              <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2} sx={{p:2}}>
+              <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}  sx={{p:2}}>
                 <Box gridColumn="span 4">                  
                   <TextField 
                     id="" select fullWidth 
@@ -232,15 +236,17 @@ function ListaCloracion() {
                   </TextField>                  
                 </Box>
                 <Box gridColumn="span 4">
-                  <LocalizationProvider dateAdapter={AdapterDayjs}>
-                      <Stack spacing={2}>
-                          <MobileDatePicker   
-                          label="Fecha de Recolección (in situ)" inputFormat="DD/MM/YYYY" 
-                          value={value} onChange={handleChange} 
-                          renderInput={(params) => <TextField {...params} size="small" sx={{marginRight:1}}/>}
-                          />
-                      </Stack>
-                    </LocalizationProvider>
+                  <LocalizationProvider dateAdapter={AdapterDayjs} >
+                    <Stack spacing={2}>
+                      <MobileDatePicker   
+                      label="Fecha de Recolección (In Situ)"
+                      inputFormat="DD/MM/YYYY"
+                      value={fecha} 
+                      onChange={_changeFecha} 
+                      renderInput={(params) => <TextField {...params} size="small" sx={{marginRight:1}}/>}
+                      />
+                    </Stack>
+                  </LocalizationProvider>
                 </Box>
               </Box>
 
@@ -316,7 +322,7 @@ function ListaCloracion() {
 
               </Box>
 
-              <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2} sx={{p:2}}>
+              <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2} sx={{p:2}} >
                 <Box gridColumn="span 12">
                   <TextField
                     fullWidth multiline 
@@ -326,7 +332,7 @@ function ListaCloracion() {
                 </Box>
               </Box>
 
-              <Divider variant="middle" sx={{ width: '100%'}}/>
+              <Divider variant="middle" sx={{ width: '98.3%'}}/>
 
               <AccionNuevo 
                 _volver={URL_02} 
