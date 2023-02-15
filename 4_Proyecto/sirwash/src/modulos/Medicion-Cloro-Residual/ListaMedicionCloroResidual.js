@@ -14,8 +14,8 @@ import {useSate} from 'react';
 */
 
 const NAV_01 = "Lista de Encuestas";
-const NAV_02 = "Cloro Residual";
-const URL_NUEVO = "/ListaDeEncuestas/Cloracion/NuevaMedicionCloroResidual";
+const NAV_02 = "Medicion de Cloro Residual";
+const URL_NUEVO = "/ListaDeEncuestas/MedicionCloroResidual/NuevaMedicionCloroResidual";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',

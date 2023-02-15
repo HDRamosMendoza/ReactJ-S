@@ -15,7 +15,7 @@ import {useSate} from 'react';
 
 const NAV_01 = "Lista de Encuestas";
 const NAV_02 = "Desinfección de Componente del SAP";
-const URL_NUEVO = "/ListaDeEncuestas/Cloracion/NuevaLimpiezaDesinfeccionComponenteSAP";
+const URL_NUEVO = "/ListaDeEncuestas/LimpiezaDesinfeccionComponenteSAP/NuevaLimpiezaDesinfeccionComponenteSAP";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',

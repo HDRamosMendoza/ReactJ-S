@@ -60,7 +60,7 @@ const _cancelar = () => {
   }
 }
 
-const currencies = [
+let currencies = [
     {
       value: '0',
       label: 'NO',
@@ -71,7 +71,7 @@ const currencies = [
     }
 ];
   
-  let _listaCentroPoblado = [
+let _listaCentroPoblado = [
     {
       value: '00',
       label: 'Seleccionar Centro Poblado'
@@ -84,9 +84,9 @@ const currencies = [
       value: '02',
       label: 'Centro Poblado 02'
     }
-  ];
+];
   
-  let _listaSAP = [
+let _listaSAP = [
     {
       value: '00',
       label: 'Seleccionar SAP - Sistema de Agua Potable'
@@ -99,9 +99,9 @@ const currencies = [
       value: '02',
       label: 'Sistema de Agua Potable 02'
     }
-  ];
+];
   
-  let _listaMes = [
+let _listaMes = [
     {
       value: '00',
       label: 'Seleccione Mes'
@@ -110,9 +110,9 @@ const currencies = [
       value: '01',
       label: 'Mes 01'
     }
-  ];
+];
 
-  let _listaFrecuencia = [
+let _listaFrecuencia = [
     {
       value: '00',
       label: 'Seleccione Frecuencia'
@@ -121,9 +121,9 @@ const currencies = [
       value: '01',
       label: 'Frecuencia 01'
     }
-  ];
+];
 
-  let _listaHoras = [
+let _listaHoras = [
     {
       value: '00',
       label: 'Seleccione Hora'
@@ -132,9 +132,9 @@ const currencies = [
       value: '01',
       label: 'Horas 01'
     }
-  ];
+];
 
-  let _listaBalde = [
+let _listaBalde = [
     {
       value: '00',
       label: 'Seleccionar Balde'
@@ -143,8 +143,7 @@ const currencies = [
       value: '01',
       label: 'Balde 01'
     }
-  ];
-
+];
 
 function NuevaContinuidadServicio() {
     
@@ -240,7 +239,7 @@ function NuevaContinuidadServicio() {
 
               <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2} sx={{p:2}}>
                 <Box gridColumn="span 4">
-                <Typography gutterBottom variant="h7" component="div" sx={{ marginBottom:'25px'}}>Registro de Continuidad del Servicio </Typography>
+                  <Typography gutterBottom variant="h7" component="div" sx={{ marginBottom:'25px'}}>Registro de Continuidad del Servicio </Typography>
                   <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
                   
                     <Box gridColumn="span 4">
@@ -365,7 +364,7 @@ function NuevaContinuidadServicio() {
         </Grid>
       </Box>
     
-    </div>
+        </div>
     )
 };
 
