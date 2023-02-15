@@ -3,32 +3,22 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
-
 import Stack from '@mui/material/Stack';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
-
 import {Navegacion_03} from '../../Componente/Navegacion';
 import Titulo from '../../Componente/Titulo';
 import AccionNuevo from '../../Componente/AccionNuevo';
-
 import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
-
-
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-
-import FolderIcon from '@mui/icons-material/Folder';
-
 
 const NAV_01 = "Lista de Encuestas";
 const URL_01 = "/home";

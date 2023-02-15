@@ -15,7 +15,7 @@ import {useSate} from 'react';
 
 const NAV_01 = "Lista de Encuestas";
 const NAV_02 = "Continuidad del Servicio";
-const URL_NUEVO = "/ListaDeEncuestas/Cloracion/NuevaContinuidadServicio";
+const URL_NUEVO = "/ListaDeEncuestas/ContinuidadServicio/NuevaContinuidadServicio";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
