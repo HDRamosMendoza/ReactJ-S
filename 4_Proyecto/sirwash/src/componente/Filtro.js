@@ -46,6 +46,18 @@ function Filtro({_buscar, _limpiar}) {
         {value: '04', label: 'Operador 04'},
         {value: '05', label: 'Operador 05'}
     ];
+    const [validador, setValidador] = React.useState('NA');
+    const _changeSelectValidador = (event) => { 
+        setValidador(event.target.value);
+    };
+    const valuesValidador = [
+        {value: 'NA', label: 'Seleccione Recolector'},
+        {value: '01', label: 'Operador 01'},
+        {value: '02', label: 'Operador 02'},
+        {value: '03', label: 'Operador 03'},
+        {value: '04', label: 'Operador 04'},
+        {value: '05', label: 'Operador 05'}
+    ];
     return (
         <Box
             component="span"
@@ -56,33 +68,31 @@ function Filtro({_buscar, _limpiar}) {
             xs={1} >
             <Grid item xs={6} display="flex" justifyContent="flex-start">
 
-               
+                <LocalizationProvider dateAdapter={AdapterDayjs} >
+                    <Stack spacing={2}>
+                        <MobileDatePicker   
+                            label="Fecha de Inicio"
+                            inputFormat="DD/MM/YYYY"
+                            value={fechaInicio} 
+                            onChange={_changeFechaInicio} 
+                            renderInput={
+                                (params) => <TextField {...params} size="small" sx={{marginRight:1}}/>
+                            }/>
+                    </Stack>
+                </LocalizationProvider>
 
-            <LocalizationProvider dateAdapter={AdapterDayjs} >
-                <Stack spacing={2}>
-                    <MobileDatePicker   
-                    label="Fecha de Inicio"
-                    inputFormat="DD/MM/YYYY"
-                    value={fechaInicio} 
-                    onChange={_changeFechaInicio} 
-                    renderInput={(params) => <TextField {...params} size="small" sx={{marginRight:1}}/>}
-                    />
-                </Stack>
-            </LocalizationProvider>
-
-            <LocalizationProvider dateAdapter={AdapterDayjs} sx={{marginLeft:2}}>
-            <Stack spacing={2}>
-                <MobileDatePicker   
-                label="Fecha de Fin"
-                inputFormat="DD/MM/YYYY"
-                value={fechaFin} 
-                onChange={_changeFechaFin} 
-                renderInput={(params) => <TextField {...params} size="small" sx={{marginRight:1}}/>}
-                />
-            </Stack>
-            </LocalizationProvider>
-
-
+                <LocalizationProvider dateAdapter={AdapterDayjs} sx={{marginLeft:2}}>
+                    <Stack spacing={2}>
+                        <MobileDatePicker   
+                            label="Fecha de Fin"
+                            inputFormat="DD/MM/YYYY"
+                            value={fechaFin} 
+                            onChange={_changeFechaFin} 
+                            renderInput={
+                                (params) => <TextField {...params} size="small" sx={{marginRight:1}}/>
+                            }/>
+                    </Stack>
+                </LocalizationProvider>
 
                 <Box sx={{ minWidth: 200, marginLeft:1}}>
                     <FormControl fullWidth>
@@ -94,11 +104,34 @@ function Filtro({_buscar, _limpiar}) {
                             size="small" 
                             onChange={_changeSelect} 
                             placeholder="Se">
-                            {values.map((option) => (
-                                <MenuItem value={option.value} key={option.value}>
-                                    {option.label}
-                                </MenuItem>
-                            ))}
+                            {
+                                values.map((option) => (
+                                    <MenuItem value={option.value} key={option.value}>
+                                        {option.label}
+                                    </MenuItem>
+                                ))
+                            }
+                        </Select>
+                    </FormControl>
+                </Box>
+
+                <Box sx={{ minWidth: 200, marginLeft:1}}>
+                    <FormControl fullWidth>
+                        <InputLabel id="ID_Validador">Validador</InputLabel>
+                        <Select 
+                            labelId="ID_Validador" 
+                            value={validador} 
+                            label="Validador" 
+                            size="small" 
+                            onChange={_changeSelectValidador} 
+                            placeholder="Se">
+                            {
+                                valuesValidador.map((option) => (
+                                    <MenuItem value={option.value} key={option.value}>
+                                        {option.label}
+                                    </MenuItem>
+                                ))
+                            }
                         </Select>
                     </FormControl>
                 </Box>
