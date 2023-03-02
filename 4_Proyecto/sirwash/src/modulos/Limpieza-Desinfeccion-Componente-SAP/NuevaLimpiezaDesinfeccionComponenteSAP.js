@@ -186,7 +186,7 @@ function NuevaLimpiezaDesinfeccionComponenteSAP() {
                 </Grid>
               </Box>
 
-              <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}  sx={{p:2}}>
+              <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2} sx={{p:0.5,marginTop:'0',padding:'0px 17px 10px 17px'}}>
                 <Box gridColumn="span 4">                  
                   <TextField 
                     id="" select fullWidth 
@@ -230,7 +230,7 @@ function NuevaLimpiezaDesinfeccionComponenteSAP() {
                 </Box>
               </Box>
 
-              <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2} sx={{p:2}}>
+              <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2} sx={{p:0.5,marginTop:'0',padding:'10px 17px'}}>
                 <Box gridColumn="span 4">
                   <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
                     <Box gridColumn="span 12">
@@ -299,7 +299,7 @@ function NuevaLimpiezaDesinfeccionComponenteSAP() {
 
               </Box>
 
-              <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2} sx={{p:2}} >
+              <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2} sx={{p:0.5,marginTop:'0',padding:'10px 17px'}}>
                 <Box gridColumn="span 12">
                   <TextField
                     fullWidth multiline 
@@ -309,7 +309,7 @@ function NuevaLimpiezaDesinfeccionComponenteSAP() {
                 </Box>
               </Box>
 
-              <Divider variant="middle" sx={{ width: '98.3%'}}/>
+              <Divider variant="middle" sx={{ width:'99%',marginTop:'10px'}}/>
 
               <AccionNuevo 
                 _volver={URL_02} 

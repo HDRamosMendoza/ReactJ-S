@@ -41,11 +41,8 @@ function Acciones({
       justifyContent="space-between" 
       alignItems="center" xs={1}>
 
-      <Button 
-        variant="outlined" 
-        color="inherit" 
-        style={{height:'30px'}} >
-        <ChevronLeftIcon/>
+      <Button variant="outlined" color="inherit" style={{height:'30px',fontSize:'12px'}}>
+        <ChevronLeftIcon />
         <Link to="/dashboard">Volver</Link>        
       </Button>
 
@@ -54,7 +51,7 @@ function Acciones({
           variant="outlined" 
           size="small" 
           color="inherit" 
-          sx={{marginLeft:'5px'}} 
+          sx={{marginLeft:'5px',fontSize:'12px'}} 
           onClick={_actualizarRegistro} >
           <AutorenewIcon sx={{fontSize:18,marginRight:1}}/>
           Actualizar
@@ -64,7 +61,7 @@ function Acciones({
           variant="contained" 
           size="small" 
           color="primary" 
-          sx={{marginLeft:'5px'}} 
+          sx={{marginLeft:'5px',fontSize:'12px'}} 
           onClick={_nuevoRegistro} >
           <AddIcon sx={{fontSize:18,marginRight:1}}/>
           <Link to={_urlNuevo}>Nuevo Registro</Link>
@@ -74,7 +71,7 @@ function Acciones({
           variant="contained" 
           size="small" 
           color="success" 
-          sx={{marginLeft:'5px'}} 
+          sx={{marginLeft:'5px',fontSize:'12px'}} 
           onClick={_exportarRegistro} >
           <CloudDownloadIcon sx={{fontSize:18,marginRight:1}}/>
           Exportar XLS
@@ -82,7 +79,7 @@ function Acciones({
         <Button 
           variant="contained" 
           size="small" 
-          sx={{marginLeft:'5px'}}>
+          sx={{marginLeft:'5px',fontSize:'12px'}}>
           <Link to={_urlDetalle}>DETALLE</Link>
         </Button>
       </Grid>

@@ -38,8 +38,6 @@ const _buscar = (_fechaInicio, _fechaFin, _colector) => {
       console.log(new Date(_fechaFin["$d"]).toLocaleDateString("es"));
     }
     
-    
-    
     console.log(_colector);
   } catch (error) {
     console.error(`Error - _buscar : ${error.name} - ${error.message}`);
@@ -48,9 +46,7 @@ const _buscar = (_fechaInicio, _fechaFin, _colector) => {
 
 const _limpiar = () => {
   try {
-
     console.log("Limpiar");
-
   } catch (error) {
     console.error(`Error - _limpiar : ${error.name} - ${error.message}`);
   }
@@ -58,9 +54,7 @@ const _limpiar = () => {
 
 const _volver = () => {
   try {
-
     console.log("Volver");
-
   } catch (error) {
     console.error(`Error - _volver : ${error.name} - ${error.message}`);
   }
@@ -68,9 +62,7 @@ const _volver = () => {
 
 const _actualizarRegistro = () => {
   try {
-
     console.log("Actualizar");
-
   } catch (error) {
     console.error(`Error - _actualizarRegistro : ${error.name} - ${error.message}`);
   }
@@ -78,9 +70,7 @@ const _actualizarRegistro = () => {
 
 const _nuevoRegistro = () => {
   try {
-
     console.log("Nuevo");
-
   } catch (error) {
     console.error(`Error - _nuevoRegistro : ${error.name} - ${error.message}`);
   }
@@ -88,9 +78,7 @@ const _nuevoRegistro = () => {
 
 const _exportarRegistro = () => {
   try {
-
     console.log("Exportar");
-
   } catch (error) {
     console.error(`Error - _exportarRegistro : ${error.name} - ${error.message}`);
   }

@@ -195,7 +195,7 @@ function NuevaContinuidadServicio() {
                 </Grid>
               </Box>
 
-              <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}  sx={{p:2}}>
+              <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2} sx={{p:0.5,marginTop:'0',padding:'0px 17px 10px 17px'}}>
                 <Box gridColumn="span 4">                  
                   <TextField 
                     id="" select fullWidth 
@@ -239,7 +239,7 @@ function NuevaContinuidadServicio() {
                 </Box>
               </Box>
 
-              <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2} sx={{p:2}}>
+              <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2} sx={{p:0.5,marginTop:'0',padding:'10px 17px'}}>
                 <Box gridColumn="span 4">
                   <Typography gutterBottom variant="h7" component="div" sx={{ marginBottom:'25px'}}>Registro de Continuidad del Servicio </Typography>
                   <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
@@ -347,7 +347,7 @@ function NuevaContinuidadServicio() {
 
               </Box>
 
-              <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2} sx={{p:2}} >
+              <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2} sx={{p:0.5,marginTop:'0',padding:'10px 17px'}}>
                 <Box gridColumn="span 12">
                   <TextField
                     fullWidth multiline 
@@ -357,7 +357,7 @@ function NuevaContinuidadServicio() {
                 </Box>
               </Box>
 
-              <Divider variant="middle" sx={{ width: '98.3%'}}/>
+              <Divider variant="middle" sx={{ width:'99%',marginTop:'10px'}}/>
 
               <AccionNuevo 
                 _volver={URL_02} 

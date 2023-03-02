@@ -62,7 +62,7 @@ function DetalleMedicionCloroResidual() {
             <Grid container spacing={2}>
                 <Grid item xs={12}>
                     <Item>
-                        <Box component="span" m={0} 
+                        <Box component="span" m={1} 
                             display="flex" 
                             justifyContent="space-between" 
                             alignItems="left" 
@@ -202,7 +202,7 @@ function DetalleMedicionCloroResidual() {
                                             </ListItem>
                                         </List>
 
-                                        <ImageList sx={{ width: 1, height: 200, padding:'0', margin:'10px 0 0 0' }}>
+                                        <ImageList sx={{ width: 1, height: 210, padding:'0', margin:'10px 0 0 0' }}>
                                             {itemData.map((item) => (
                                                 <ImageListItem key={item.img}>
                                                 <img src={`${item.img}?w=248&fit=crop&auto=format`}
@@ -240,12 +240,8 @@ function DetalleMedicionCloroResidual() {
                                 MAPA
                             </Box>
 
-                        </Box>
-                        <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2} sx={{p:0.5}} >
-                            <Box gridColumn="span 12">                  
-                            </Box>
-                        </Box>
-                        <Divider variant="middle" sx={{ width: '99%' }}/>
+                        </Box>                        
+                        <Divider variant="middle" sx={{ width:'99%',marginTop:'10px'}}/>
                         <AccionVolver _volver={URL_02} />
                     </Item>
                 </Grid>

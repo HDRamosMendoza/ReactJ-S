@@ -65,7 +65,7 @@ function Filtro({_buscar, _limpiar}) {
             display="flex"
             justifyContent="space-between"
             alignItems="center"
-            xs={1} >
+            xs={1} sx={{ my:0,mx:2,marginTop:'20px'}}>
             <Grid item xs={6} display="flex" justifyContent="flex-start">
 
                 <LocalizationProvider dateAdapter={AdapterDayjs} >
@@ -142,7 +142,7 @@ function Filtro({_buscar, _limpiar}) {
                     variant="contained" 
                     size="small" 
                     color="primary" 
-                    sx={{marginLeft:1}} 
+                    sx={{marginLeft:'5px',fontSize:'12px'}}  
                     onClick={()=>_buscar(fechaInicio, fechaFin, recolector)} >
                     <SearchIcon sx={{fontSize:18,marginRight:1}}/>
                     Buscar
@@ -151,7 +151,7 @@ function Filtro({_buscar, _limpiar}) {
                     variant="outlined" 
                     size="small" 
                     color="inherit" 
-                    sx={{marginLeft:1}} 
+                    sx={{marginLeft:'5px',fontSize:'12px'}} 
                     onClick={_limpiar} >
                     <DeleteIcon sx={{fontSize:18,marginRight:1}}/>
                     Limpiar

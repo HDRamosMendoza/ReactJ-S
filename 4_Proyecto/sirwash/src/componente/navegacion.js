@@ -23,11 +23,11 @@ export function Navegacion_02({nav_01, ur_01, nav_02}) {
     <Typography color="text.primary">Cloración</Typography>
   </Breadcrumbs> */
   return (
-    <Box xs={{ flexGrow: 1 }}>
+    <Box xs={{flexGrow:1}} sx={{mx:0}}>
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <Item>
-            <Breadcrumbs aria-label="breadcrumb" sx={{ marginLeft:1, fontSize:'12px' }}>
+            <Breadcrumbs aria-label="breadcrumb" sx={{marginLeft:2,fontSize:'12px'}}>
               <Link underline="hover" color="inherit" href={ur_01}>
                 {nav_01}
               </Link>
@@ -44,18 +44,18 @@ export function Navegacion_02({nav_01, ur_01, nav_02}) {
 
 export function Navegacion_03({nav_01, url_01, nav_02, url_02, nav_03}) {
   return (
-    <Box xs={{ flexGrow: 1 }} sx={{  mx: 0 }}>
+    <Box xs={{flexGrow:1}} sx={{mx:0}}>
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <Item>
-            <Breadcrumbs aria-label="breadcrumb" sx={{ marginLeft:2, fontSize:'12px' }}>
+            <Breadcrumbs aria-label="breadcrumb" sx={{marginLeft:2,fontSize:'12px'}}>
               <Link underline="hover" color="inherit" href={url_01}>
                 {nav_01}
               </Link>
               <Link underline="hover" color="inherit" href={url_02}>
                 {nav_02}
               </Link>
-              <Typography color="text.primary" sx={{ fontSize:'12px' }}>
+              <Typography color="text.primary" sx={{fontSize:'12px'}}>
                 <strong>{nav_03}</strong>
               </Typography>
             </Breadcrumbs>
