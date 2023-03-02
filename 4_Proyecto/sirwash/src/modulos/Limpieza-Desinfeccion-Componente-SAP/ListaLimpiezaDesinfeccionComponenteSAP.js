@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import {Navegacion_02 } from '../../Componente/Navegacion';
-import Titulo from '../../Componente/Titulo';
+import {Titulo} from '../../Componente/Titulo';
 import Filtro from '../../Componente/Filtro';
 import Acciones from '../../Componente/Acciones';
 import TableGrid from '../../Componente/TableGrid';

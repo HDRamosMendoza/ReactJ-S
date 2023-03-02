@@ -12,7 +12,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
 import {Navegacion_03} from '../../Componente/Navegacion';
-import Titulo from '../../Componente/Titulo';
+import {Titulo} from '../../Componente/Titulo';
 import {AccionNuevo} from '../../Componente/Accion';
 import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
 import List from '@mui/material/List';

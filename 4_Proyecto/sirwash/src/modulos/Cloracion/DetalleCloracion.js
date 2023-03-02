@@ -18,7 +18,7 @@ import IconButton from '@mui/material/IconButton';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import {Navegacion_03} from '../../Componente/Navegacion';
 import {AccionVolver} from '../../Componente/Accion';
-import Titulo from '../../Componente/Titulo';
+import {TituloDetalle} from '../../Componente/Titulo';
 import '../../style/Cloracion.css';
 
 const NAV_01 = "Lista de Encuestas";
@@ -26,6 +26,7 @@ const URL_01 = "/home";
 const NAV_02 = "Cloración";
 const URL_02 = "/ListaDeEncuestas/Cloracion";
 const NAV_03 = "Detalle de Cloración";
+const DATE_IN_SITU = "01/10/2023";
 
 const itemData = [{
       img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
@@ -65,7 +66,7 @@ function DetalleCloracion() {
                             alignItems="left" 
                             xs={1}>
                             <Grid item xs={11} display="flex" justifyContent="flex-start">
-                            <Titulo name={NAV_03}/>
+                                <TituloDetalle name="Fecha de Recolección (In Situ)" date={DATE_IN_SITU}/>
                             </Grid>
                             <Grid item xs={1} display="flex" justifyContent="flex-center" sx={{ padding:'5px 0 0 20px', textAlign: 'center'}}>
                                 <Stack direction="row" spacing={1}>
@@ -76,16 +77,8 @@ function DetalleCloracion() {
                         <Box display="grid" gridTemplateColumns="repeat(12, 1fr)">
 
                             <Box gridColumn="span 6">
-                                <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={1}  sx={{p:1}} justifyContent="flex-start">
-                                    <Box gridColumn="span 4" sx={{ textAlign:'right', fontWeight: 'bold' }}>
-                                        <label>Recolector</label>
-                                    </Box>
-                                    <Box gridColumn="span 8" sx={{ textAlign:'left'}}>
-                                        <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry</span>
-                                    </Box>
-                                </Box>
-
-                                <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={1}  sx={{p:1}}>
+                                
+                                <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={1}  sx={{p:0.5}}>
                                     <Box gridColumn="span 4" sx={{ textAlign:'right', fontWeight: 'bold' }}>
                                         <label>Centro Poblado</label>
                                     </Box>
@@ -94,7 +87,7 @@ function DetalleCloracion() {
                                     </Box>
                                 </Box>
 
-                                <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={1}  sx={{p:1}}>
+                                <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={1}  sx={{p:0.5}}>
                                     <Box gridColumn="span 4" sx={{ textAlign:'right', fontWeight: 'bold' }}>
                                         <label>Sistema de Agua Potable (SAP)</label>
                                     </Box>
@@ -103,7 +96,7 @@ function DetalleCloracion() {
                                     </Box>
                                 </Box>
 
-                                <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={1}  sx={{p:1}}>
+                                <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={1}  sx={{p:0.5}}>
                                     <Box gridColumn="span 4" sx={{ textAlign:'right', fontWeight: 'bold' }}>
                                         <label>Componente</label>
                                     </Box>
@@ -112,7 +105,7 @@ function DetalleCloracion() {
                                     </Box>
                                 </Box>
 
-                                <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={1}  sx={{p:1}}>
+                                <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={1}  sx={{p:0.5}}>
                                     <Box gridColumn="span 4" sx={{ textAlign:'right', fontWeight: 'bold' }}>
                                         <label>Insumo</label>
                                     </Box>
@@ -121,7 +114,7 @@ function DetalleCloracion() {
                                     </Box>
                                 </Box>
                                 
-                                <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={1}  sx={{p:1}}>
+                                <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={1}  sx={{p:0.5}}>
                                     <Box gridColumn="span 4" sx={{ textAlign:'right', fontWeight: 'bold' }}>
                                         <label>Se calibro el sistema de agua</label>
                                     </Box>
@@ -130,7 +123,16 @@ function DetalleCloracion() {
                                     </Box>
                                 </Box>
 
-                                <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={1}  sx={{p:1}}>
+                                <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={1}  sx={{p:0.5}} justifyContent="flex-start">
+                                    <Box gridColumn="span 4" sx={{ textAlign:'right', fontWeight: 'bold' }}>
+                                        <label>Recolector</label>
+                                    </Box>
+                                    <Box gridColumn="span 8" sx={{ textAlign:'left'}}>
+                                        <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry</span>
+                                    </Box>
+                                </Box>
+
+                                <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={1}  sx={{p:0.5}}>
                                     <Box gridColumn="span 4" sx={{ textAlign:'right', fontWeight: 'bold' }}>
                                         <label>Fecha de Registro</label>
                                     </Box>
@@ -139,7 +141,7 @@ function DetalleCloracion() {
                                     </Box>
                                 </Box>
 
-                                <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={1}  sx={{p:1}}>
+                                <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={1}  sx={{p:0.5}}>
                                     <Box gridColumn="span 4" sx={{ textAlign:'right', fontWeight: 'bold' }}>
                                         <label>Sustento</label>
                                     </Box>
@@ -159,7 +161,7 @@ function DetalleCloracion() {
                                             </ListItem>
                                         </List>
 
-                                        <ImageList sx={{ width: 1, height: 250, padding:'0', margin:'10px 0 0 0' }}>
+                                        <ImageList sx={{ width: 1, height: 200, padding:'0', margin:'10px 0 0 0' }}>
                                             {itemData.map((item) => (
                                                 <ImageListItem key={item.img}>
                                                 <img src={`${item.img}?w=248&fit=crop&auto=format`}
@@ -182,7 +184,7 @@ function DetalleCloracion() {
                                     </Box>
                                 </Box>
 
-                                <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={1}  sx={{p:1}}>
+                                <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={1}  sx={{p:0.5}}>
                                     <Box gridColumn="span 4" sx={{ textAlign:'right', fontWeight: 'bold' }}>
                                         <label>Observaciones</label>
                                     </Box>
@@ -198,7 +200,7 @@ function DetalleCloracion() {
                             </Box>
 
                         </Box>
-                        <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2} sx={{p:2}} >
+                        <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2} sx={{p:0.5}}>
                             <Box gridColumn="span 12">                  
                             </Box>
                         </Box>
