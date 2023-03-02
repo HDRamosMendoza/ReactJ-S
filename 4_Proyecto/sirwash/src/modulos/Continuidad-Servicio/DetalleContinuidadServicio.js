@@ -1,5 +1,24 @@
 import * as React from 'react';
-import {Navegacion_03 } from '../../Componente/Navegacion';
+import {styled} from '@mui/material/styles';
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import Divider from '@mui/material/Divider';
+import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+import ImageListItemBar from '@mui/material/ImageListItemBar';
+import IconButton from '@mui/material/IconButton';
+import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
+import {Navegacion_03} from '../../Componente/Navegacion';
+import {AccionVolver} from '../../Componente/Accion';
+import Titulo from '../../Componente/Titulo';
 import '../../style/ContinuidadServicio.css';
 
 const NAV_01 = "Lista de Encuestas";
