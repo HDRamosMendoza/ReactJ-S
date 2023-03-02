@@ -16,7 +16,7 @@ const manejarClic = () => {
   }
 }
 
-function AccionNuevo({_volver, _guardar, _limpiar, _cancelar}) {
+export function AccionNuevo({_volver, _guardar, _limpiar, _cancelar}) {
   return (
     <Box 
       component="span" 
@@ -72,4 +72,18 @@ function AccionNuevo({_volver, _guardar, _limpiar, _cancelar}) {
   );
 };
 
-export default AccionNuevo;
+export function AccionVolver({_volver}) {
+  return (
+    <Box 
+      component="span" 
+      display="flex" 
+      justifyContent="space-between" 
+      alignItems="center" 
+      m={2} xs={1} sx={{p:0}}>
+      <Button variant="outlined" color="inherit" style={{height:'30px', fontSize: '12px'}}>
+        <ChevronLeftIcon/>
+        <Link to={_volver}>Volver</Link>
+      </Button>
+    </Box>
+  );
+};

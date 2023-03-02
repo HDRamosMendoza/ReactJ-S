@@ -9,15 +9,17 @@ import Typography from '@mui/material/Typography';
 
 function Titulo(props) {
     return (
-        <Box sx={{ width: '99%', marginBottom:'25px'}}>
+        <Box sx={{ width: '99%', marginBottom:'10px'}}>
             <Box sx={{ my: 0, mx: 2 }}>
                 <Grid container textAlign="left">
                     <Grid item xs>
-                        <Typography gutterBottom variant="h5" component="div"> {props.name} </Typography>
+                        <Typography gutterBottom variant="h6" component="div">
+                            {props.name}
+                        </Typography>
                     </Grid>
                 </Grid>
             </Box>
-            <Divider variant="middle" sx={{ width: '100%'}}/>
+            <Divider variant="middle" sx={{ width: '99%'}}/>
         </Box>
   );
 }

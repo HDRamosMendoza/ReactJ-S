@@ -31,7 +31,8 @@ function Acciones({
   _urlNuevo,
   _actualizarRegistro,
   _nuevoRegistro,
-  _exportarRegistro
+  _exportarRegistro,
+  _urlDetalle
 }) {
   return (
     <Box 
@@ -77,6 +78,12 @@ function Acciones({
           onClick={_exportarRegistro} >
           <CloudDownloadIcon sx={{fontSize:18,marginRight:1}}/>
           Exportar XLS
+        </Button>
+        <Button 
+          variant="contained" 
+          size="small" 
+          sx={{marginLeft:'5px'}}>
+          <Link to={_urlDetalle}>DETALLE</Link>
         </Button>
       </Grid>
 

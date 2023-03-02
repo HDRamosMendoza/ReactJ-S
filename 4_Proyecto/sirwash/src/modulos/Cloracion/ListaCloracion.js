@@ -14,8 +14,10 @@ import {useSate} from 'react';
 */
 
 const NAV_01 = "Lista de Encuestas";
+const URL_01 = "/home";
 const NAV_02 = "Cloración";
 const URL_NUEVO = "/ListaDeEncuestas/Cloracion/NuevaCloracion";
+const URL_DETALLE = "/ListaDeEncuestas/Cloracion/DetalleCloracion";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -96,12 +98,12 @@ const _exportarRegistro = () => {
 function ListaCloracion() {
   return (
     <div>
-      <Navegacion_02 nav_01={NAV_01} nav_02={NAV_02} />
+      <Navegacion_02 nav_01={NAV_01} url_01={URL_01} nav_02={NAV_02} />
       <Box xs={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Item>
-              <Titulo name={NAV_02}/>
+              <Titulo name={NAV_02} />
               <Filtro 
                 _buscar = {_buscar} 
                 _limpiar = {_limpiar} />
@@ -111,7 +113,8 @@ function ListaCloracion() {
                 _urlNuevo = {URL_NUEVO} 
                 _actualizarRegistro = {_actualizarRegistro} 
                 _nuevoRegistro = {_nuevoRegistro} 
-                _exportarRegistro = {_exportarRegistro} />
+                _exportarRegistro = {_exportarRegistro} 
+                _urlDetalle = {URL_DETALLE} />
             </Item>
           </Grid>
         </Grid>

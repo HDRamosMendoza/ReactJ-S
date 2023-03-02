@@ -15,50 +15,53 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
   }));
 
-export function Navegacion_02({nav_01, nav_02}) {
-    /*
-    <Breadcrumbs aria-label="breadcrumb" sx={{marginLeft:1}}>
-      <Link underline="hover" color="inherit" href="#">
-        {props.tab}
-      </Link>
-      <Typography color="text.primary">Cloración</Typography>
-    </Breadcrumbs>
-    */
-
-    return (
-      <Box xs={{ flexGrow: 1 }}>
-        <Grid container spacing={2}>
-          <Grid item xs={12}>
-            <Item>
-              <Breadcrumbs aria-label="breadcrumb" sx={{marginLeft:1,fontSize:'12px'}}>
-                <Link underline="hover" color="inherit" href="#">{nav_01}</Link>
-                <Typography color="text.primary" sx={{fontSize:'12px'}}><strong>{nav_02}</strong></Typography>
-              </Breadcrumbs>
-            </Item>
-          </Grid>
-        </Grid>
-      </Box>
-  );
-}
-
-export function Navegacion_03({nav_01, url_01, nav_02, url_02, nav_03}) {
+export function Navegacion_02({nav_01, ur_01, nav_02}) {
+  /* <Breadcrumbs aria-label="breadcrumb" sx={{marginLeft:1}}>
+    <Link underline="hover" color="inherit" href="#">
+      {props.tab}
+    </Link>
+    <Typography color="text.primary">Cloración</Typography>
+  </Breadcrumbs> */
   return (
     <Box xs={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <Item>
-
-            <Breadcrumbs aria-label="breadcrumb" sx={{marginLeft:1,fontSize:'12px'}}>
-              <Link underline="hover" color="inherit" href={url_01}>{nav_01}</Link>
-              <Link underline="hover" color="inherit" href={url_02}>{nav_02}</Link>
-              <Typography color="text.primary" sx={{fontSize:'12px'}}><strong>{nav_03}</strong></Typography>
+            <Breadcrumbs aria-label="breadcrumb" sx={{ marginLeft:1, fontSize:'12px' }}>
+              <Link underline="hover" color="inherit" href={ur_01}>
+                {nav_01}
+              </Link>
+              <Typography color="text.primary" sx={{fontSize:'12px'}}>
+                <strong>{nav_02}</strong>
+              </Typography>
             </Breadcrumbs>
-
           </Item>
         </Grid>
       </Grid>
     </Box>
-);
-}
+  );
+};
 
-//export default Navegacion;
+export function Navegacion_03({nav_01, url_01, nav_02, url_02, nav_03}) {
+  return (
+    <Box xs={{ flexGrow: 1 }} sx={{  mx: 0 }}>
+      <Grid container spacing={2}>
+        <Grid item xs={12}>
+          <Item>
+            <Breadcrumbs aria-label="breadcrumb" sx={{ marginLeft:2, fontSize:'12px' }}>
+              <Link underline="hover" color="inherit" href={url_01}>
+                {nav_01}
+              </Link>
+              <Link underline="hover" color="inherit" href={url_02}>
+                {nav_02}
+              </Link>
+              <Typography color="text.primary" sx={{ fontSize:'12px' }}>
+                <strong>{nav_03}</strong>
+              </Typography>
+            </Breadcrumbs>
+          </Item>
+        </Grid>
+      </Grid>
+    </Box>
+  );
+};
