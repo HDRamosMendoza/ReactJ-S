@@ -171,7 +171,7 @@ function NuevaLimpiezaDesinfeccionComponenteSAP() {
                 <Grid item xs={11} display="flex" justifyContent="flex-start">
                   <Titulo name={NAV_03}/>
                 </Grid>
-                <Grid item xs={2} display="flex" justifyContent="flex-end">
+                <Grid item xs={1} display="flex" justifyContent="flex-end">
                   <TextField
                     select
                     label="Validado"
